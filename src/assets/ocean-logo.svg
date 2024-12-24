@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e" />
+      <stop offset="100%" style="stop-color:#0288d1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 主圆形背景 -->
+  <circle cx="50" cy="50" r="45" fill="url(#logo-gradient)" />
+  
+  <!-- 鱼形图案 -->
+  <g transform="translate(50,50) rotate(-30)">
+    <!-- 鱼身 -->
+    <path
+      d="M-5,-15 C10,-15 20,-5 20,0 C20,5 10,15 -5,15 C-15,15 -25,7 -25,0 C-25,-7 -15,-15 -5,-15"
+      fill="white"
+      opacity="0.9"
+    />
+    <!-- 鱼尾 -->
+    <path
+      d="M-25,0 L-35,10 L-35,-10 Z"
+      fill="white"
+      opacity="0.9"
+    />
+    <!-- 鱼眼 -->
+    <circle cx="10" cy="0" r="3" fill="#1a237e" />
+  </g>
+  
+  <!-- 波浪纹 -->
+  <path
+    d="M20,70 Q35,65 50,70 T80,70"
+    fill="none"
+    stroke="white"
+    stroke-width="3"
+    opacity="0.6"
+  />
+  
+  <!-- 气泡装饰 -->
+  <circle cx="70" cy="30" r="3" fill="white" opacity="0.6" />
+  <circle cx="75" cy="40" r="2" fill="white" opacity="0.4" />
+  <circle cx="65" cy="35" r="1.5" fill="white" opacity="0.5" />
+</svg> 
