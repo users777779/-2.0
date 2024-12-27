@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14172 7677">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="poster-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#0288d1;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Logo渐变 -->
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e" />
+      <stop offset="100%" style="stop-color:#0288d1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="14172" height="7677" fill="white"/>
+  <rect width="14172" height="7677" fill="url(#poster-gradient)"/>
+
+  <!-- 标题区域 -->
+  <g transform="translate(1000, 600)">
+    <!-- Logo -->
+    <g transform="translate(0, 0) scale(2)">
+      <!-- 主圆形背景 -->
+      <circle cx="50" cy="50" r="45" fill="url(#logo-gradient)" />
+      
+      <!-- 鱼形图案 -->
+      <g transform="translate(50,50) rotate(-30)">
+        <!-- 鱼身 -->
+        <path
+          d="M-5,-15 C10,-15 20,-5 20,0 C20,5 10,15 -5,15 C-15,15 -25,7 -25,0 C-25,-7 -15,-15 -5,-15"
+          fill="white"
+          opacity="0.9"
+        />
+        <!-- 鱼尾 -->
+        <path
+          d="M-25,0 L-35,10 L-35,-10 Z"
+          fill="white"
+          opacity="0.9"
+        />
+        <!-- 鱼眼 -->
+        <circle cx="10" cy="0" r="3" fill="#1a237e" />
+      </g>
+    </g>
+
+    <!-- 项目名称 -->
+    <text x="300" y="50" font-size="120" font-weight="bold" fill="#1a237e">
+      海智图谱
+    </text>
+    <text x="300" y="150" font-size="60" fill="#666">
+      海洋生物知识图谱系统
+    </text>
+  </g>
+
+  <!-- 项目介绍 -->
+  <g transform="translate(1000, 1000)">
+    <text x="0" y="0" font-size="80" font-weight="bold" fill="#1a237e">项目介绍</text>
+    <text x="0" y="120" font-size="48" fill="#666">
+      海智图谱是一个基于知识图谱技术的海洋生物信息管理与分析系统，旨在构建完整的海洋
+    </text>
+    <text x="0" y="200" font-size="48" fill="#666">
+      生物知识体系，实现数据的智能化管理和深度挖掘。系统通过图数据库技术，将海洋生物
+    </text>
+    <text x="0" y="280" font-size="48" fill="#666">
+      的多维度信息进行关联整合，为海洋科研工作提供强大的数据支持。
+    </text>
+  </g>
+
+  <!-- 背景意义 -->
+  <g transform="translate(1000, 1500)">
+    <text x="0" y="0" font-size="80" font-weight="bold" fill="#1a237e">背景意义</text>
+    <text x="0" y="120" font-size="48" fill="#666">• 海洋生物数据急需系统化管理和智能分析</text>
+    <text x="0" y="200" font-size="48" fill="#666">• 传统数据库难以表达生物间复杂关系网络</text>
+    <text x="0" y="280" font-size="48" fill="#666">• 知识图谱技术为海洋生物研究提供新思路</text>
+  </g>
+
+  <!-- 创新点分析 -->
+  <g transform="translate(1000, 2000)">
+    <text x="0" y="0" font-size="80" font-weight="bold" fill="#1a237e">创新点分析</text>
+    <text x="0" y="120" font-size="48" fill="#666">• 多维度知识表示：整合物种分类、生态习性、地理分布等多维信息</text>
+    <text x="0" y="200" font-size="48" fill="#666">• 智能化检索：基于图数据库的高效查询和关联分析</text>
+    <text x="0" y="280" font-size="48" fill="#666">• 可视化交互：直观展现物种关系网络，支持实时交互</text>
+    <text x="0" y="360" font-size="48" fill="#666">• 开放性架构：支持数据的导入导出，便于知识扩展</text>
+  </g>
+
+  <!-- 技术实现说明 -->
+  <g transform="translate(7000, 1000)">
+    <text x="0" y="0" font-size="80" font-weight="bold" fill="#1a237e">技术实现</text>
+    
+    <!-- 前端技术 -->
+    <g transform="translate(0, 150)">
+      <text x="0" y="0" font-size="60" font-weight="bold" fill="#333">前端技术栈</text>
+      <text x="50" y="100" font-size="48" fill="#666">• Vue 3 + TypeScript</text>
+      <text x="50" y="180" font-size="48" fill="#666">• Element Plus</text>
+      <text x="50" y="260" font-size="48" fill="#666">• D3.js 可视化</text>
+    </g>
+
+    <!-- 后端技术 -->
+    <g transform="translate(0, 600)">
+      <text x="0" y="0" font-size="60" font-weight="bold" fill="#333">后端技术栈</text>
+      <text x="50" y="100" font-size="48" fill="#666">• Neo4j 图数据库</text>
+      <text x="50" y="180" font-size="48" fill="#666">• 知识图谱构建</text>
+      <text x="50" y="260" font-size="48" fill="#666">• 智能问答系统</text>
+    </g>
+  </g>
+
+  <!-- 成果展示 -->
+  <g transform="translate(7000, 2200)">
+    <text x="0" y="0" font-size="80" font-weight="bold" fill="#1a237e">成果展示</text>
+    <!-- 知识图谱截图 -->
+    <image 
+      x="0" y="100" 
+      width="6000" 
+      height="3000" 
+      href="graph-screenshot.png"
+      preserveAspectRatio="xMidYMid slice"
+    />
+  </g>
+
+  <!-- 团队信息 -->
+  <g transform="translate(1000, 6500)">
+    <text x="0" y="0" font-size="80" font-weight="bold" fill="#1a237e">团队信息</text>
+    <text x="0" y="150" font-size="48" fill="#333">项目负责人：张家赫</text>
+    <text x="0" y="250" font-size="48" fill="#333">团队成员：史明洋、牟葆勋、郭凯瑞</text>
+    <text x="0" y="350" font-size="48" fill="#333">联系邮箱：contact@oceankg.com</text>
+  </g>
+
+  <!-- 底部信息 -->
+  <g transform="translate(7086, 7000)">
+    <text x="0" y="0" font-size="48" text-anchor="middle" fill="#666">
+      青岛大学 · 计算机科学与技术学院
+    </text>
+    <text x="0" y="100" font-size="40" text-anchor="middle" fill="#666">
+      © 2024 海智图谱项目组
+    </text>
+  </g>
+
+  <!-- 装饰性波浪线 -->
+  <path
+    d="M0,7400 Q3543,7300 7086,7400 T14172,7400"
+    fill="none"
+    stroke="url(#logo-gradient)"
+    stroke-width="10"
+    opacity="0.3"
+  />
+</svg> 

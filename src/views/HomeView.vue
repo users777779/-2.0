@@ -6,15 +6,10 @@
           <span class="gradient-text">海洋鱼类</span>
           <br />知识图谱系统
         </h1>
-        <p class="hero-description">
-          探索海洋生物的奥秘，发现水下世界的精彩
-        </p>
+        <p class="hero-description">探索海洋生物的奥秘，发现水下世界的精彩</p>
         <div class="hero-actions">
           <el-button type="primary" size="large" @click="$router.push('/graph')">
             <el-icon><Monitor /></el-icon>浏览知识图谱
-          </el-button>
-          <el-button size="large" @click="$router.push('/chat')">
-            <el-icon><ChatDotSquare /></el-icon>智能问答
           </el-button>
         </div>
       </div>
@@ -46,48 +41,43 @@
 </template>
 
 <script setup lang="ts">
-import { Monitor, ChatDotSquare, Collection, Share } from '@element-plus/icons-vue'
+import { Monitor, Collection, Share } from '@element-plus/icons-vue'
 
 const features = [
   {
     icon: 'Monitor',
     title: '知识图谱',
-    description: '直观展示海洋鱼类之间的关系网络，帮助理解生态系统的复杂性'
-  },
-  {
-    icon: 'ChatDotSquare',
-    title: '智能问答',
-    description: '基于知识图谱的智能问答系统，快速获取专业的海洋生物知识'
+    description: '直观展示海洋鱼类之间的关系网络，帮助理解生态系统的复杂性',
   },
   {
     icon: 'Collection',
     title: '物种档案',
-    description: '详细记录海洋鱼类的特征、习性、分布等信息，建立完整的物种数据库'
+    description: '详细记录海洋鱼类的特征、习性、分布等信息，建立完整的物种数据库',
   },
   {
     icon: 'Share',
     title: '知识共享',
-    description: '促进海洋生物研究成果的传播与分享，推动海洋科学发展'
-  }
+    description: '促进海洋生物研究成果的传播与分享，推动海洋科学发展',
+  },
 ]
 
 const stats = [
   {
     value: '10,000+',
-    label: '收录物种'
+    label: '收录物种',
   },
   {
     value: '50,000+',
-    label: '知识节点'
+    label: '知识节点',
   },
   {
     value: '100,000+',
-    label: '关系数量'
+    label: '关系数量',
   },
   {
     value: '99.9%',
-    label: '准确率'
-  }
+    label: '准确率',
+  },
 ]
 </script>
 
@@ -236,7 +226,8 @@ const stats = [
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

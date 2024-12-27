@@ -3,7 +3,6 @@ import { RouterLink, RouterView } from 'vue-router'
 import {
   HomeFilled,
   Collection,
-  ChatDotSquare,
   ArrowLeft,
   ArrowRight,
   Monitor,
@@ -84,10 +83,6 @@ onUnmounted(() => {
             <RouterLink to="/graph" class="nav-item" title="知识图谱">
               <el-icon><Monitor /></el-icon>
               <span v-show="!isCollapse">知识图谱</span>
-            </RouterLink>
-            <RouterLink to="/chat" class="nav-item" title="智能问答">
-              <el-icon><ChatDotSquare /></el-icon>
-              <span v-show="!isCollapse">智能问答</span>
             </RouterLink>
           </div>
           <div class="nav-section">
@@ -190,7 +185,7 @@ html.dark {
   --primary-light: #534bae;
   --primary-dark: #000051;
 
-  /* 辅助色 */
+  /* 辅���色 */
   --secondary-color: #0288d1;
   --secondary-light: #5eb8ff;
   --secondary-dark: #005b9f;

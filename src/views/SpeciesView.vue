@@ -21,6 +21,15 @@
         <el-option label="软骨鱼类" value="cartilaginous" />
         <el-option label="硬骨鱼类" value="bony" />
       </el-select>
+      <el-upload
+        class="import-upload"
+        accept=".json"
+        :auto-upload="false"
+        :show-file-list="false"
+        :on-change="handleImport"
+      >
+        <el-button type="success">导入数据</el-button>
+      </el-upload>
     </div>
 
     <!-- 鱼类列表展示 -->
@@ -65,6 +74,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+import { ElMessage } from 'element-plus'
 
 // 搜索和筛选状态
 const searchQuery = ref('')
@@ -85,10 +95,85 @@ const fishList = ref([
     habitat: '深海',
     length: 200,
     endangered: true,
-    image: 'https://example.com/tuna.jpg'
+    image:
+      'https://zh.wikipedia.org/wiki/%E5%8C%97%E6%96%B9%E8%93%9D%E9%B3%8D%E9%87%91%E6%9E%AA%E9%B1%BC#/media/File:Bluefin-big.jpg',
   },
-  // ... 更多鱼类数据
+  {
+    id: 2,
+    name: '大白鲨',
+    scientificName: 'Carcharodon carcharias',
+    habitat: '深海',
+    length: 400,
+    endangered: true,
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/8/83/Great_white_shark_size_comparison.svg',
+  },
+  {
+    id: 3,
+    name: '小丑鱼',
+    scientificName: 'Amphiprioninae',
+    habitat: '珊瑚礁',
+    length: 11,
+    endangered: false,
+    image:
+      'https://zh.wikipedia.org/wiki/%E5%B0%8F%E4%B8%91%E9%AD%9A#/media/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg',
+  },
+  {
+    id: 4,
+    name: '河豚',
+    scientificName: 'Takifugu rubripes',
+    habitat: '浅海',
+    length: 40,
+    endangered: false,
+    image: 'https://zh.wikipedia.org/wiki/%E6%B7%A1%E6%B0%B4%E8%B1%9A#/media/File:Inia.jpg',
+  },
+  {
+    id: 5,
+    name: '锤头鲨',
+    scientificName: 'Sphyrna mokarran',
+    habitat: '深海',
+    length: 350,
+    endangered: true,
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/b/bf/Great_hammerhead_shark_-_Bimini.jpg',
+  },
 ])
+
+// 添加导入功能
+const handleImport = (file: File) => {
+  const reader = new FileReader()
+  reader.onload = (e) => {
+    try {
+      const importedData = JSON.parse(e.target?.result as string)
+      // 验证导入的数据格式
+      if (
+        Array.isArray(importedData) &&
+        importedData.every(
+          (item) =>
+            item.name &&
+            item.scientificName &&
+            item.habitat &&
+            item.length &&
+            typeof item.endangered === 'boolean',
+        )
+      ) {
+        // 为导入的数据添加新的ID
+        const newData = importedData.map((item, index) => ({
+          ...item,
+          id: fishList.value.length + index + 1,
+        }))
+        fishList.value = [...fishList.value, ...newData]
+        ElMessage.success(`成功导入 ${newData.length} 条数据`)
+      } else {
+        ElMessage.error('数据格式不正确')
+      }
+    } catch (error) {
+      ElMessage.error('导入失败：无效的JSON格式')
+    }
+  }
+  reader.readAsText(file)
+  return false
+}
 </script>
 
 <style scoped>
